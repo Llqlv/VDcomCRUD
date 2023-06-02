@@ -30,7 +30,12 @@ public class UserService {
 
     @Transactional
     public void save(User user) {
-        userRepository.save(user);
+       userRepository.save(user);
+    }
+
+    @Transactional
+    public void saveAll(List<User> list) {
+        userRepository.saveAll(list);
     }
 
     @Transactional
